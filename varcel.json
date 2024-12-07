@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "news_blog/wsgi.py",
+        "use": "@varcel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.12.0"}
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "news_blog/wsgi.py"
+        }
+    ]
+ }
